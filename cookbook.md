@@ -937,10 +937,12 @@ local Diagnostics = {
     --  },
     --})
     -- Fetching custom diagnostic icons
-    error_icon = vim.diagnostic.config()['signs']['text'][vim.diagnostic.severity.ERROR],
-    warn_icon = vim.diagnostic.config()['signs']['text'][vim.diagnostic.severity.WARN],
-    info_icon = vim.diagnostic.config()['signs']['text'][vim.diagnostic.severity.INFO],
-    hint_icon = vim.diagnostic.config()['signs']['text'][vim.diagnostic.severity.HINT],
+    static = {
+        error_icon = vim.diagnostic.config()['signs']['text'][vim.diagnostic.severity.ERROR],
+        warn_icon = vim.diagnostic.config()['signs']['text'][vim.diagnostic.severity.WARN],
+        info_icon = vim.diagnostic.config()['signs']['text'][vim.diagnostic.severity.INFO],
+        hint_icon = vim.diagnostic.config()['signs']['text'][vim.diagnostic.severity.HINT],
+    }
 
     -- If you defined custom LSP diagnostics with vim.fn.sign_define(), use this instead
     -- Note defining custom LSP diagnostic this way its deprecated, though
